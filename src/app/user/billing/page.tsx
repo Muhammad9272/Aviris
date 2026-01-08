@@ -1,9 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function BillingPage() {
+  useEffect(() => {
+    document.title = 'Billing & Payment Methods - AVIRIS | Manage Your Payments';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Manage your AVIRIS payment methods, view billing history, update credit card information, and handle all payment-related settings for your subscription.');
+    }
+  }, []);
+
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     cardholderName: 'Tolga Akcay',

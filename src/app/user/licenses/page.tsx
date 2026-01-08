@@ -13,6 +13,14 @@ interface License {
 }
 
 export default function LicenseManagement() {
+  useEffect(() => {
+    document.title = 'License Management - AVIRIS | Manage Team Access & Devices';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Manage your AVIRIS licenses, invite team members, allocate device slots, track license status, and control access to your organization\'s security resources and features.');
+    }
+  }, []);
+
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState('All');
   const [showStatusDropdown, setShowStatusDropdown] = useState(false);
@@ -215,8 +223,8 @@ export default function LicenseManagement() {
 
   return (
     <>
-    <div className="main-content-wrapper">
-      <div className="card-custom p-4 mb-4">
+      <div className="main-content-wrapper">
+        <div className="card-custom p-4 mb-4">
         {/* Header */}
         <div className="d-flex align-items-start align-items-sm-center gap-2 gap-sm-3 mb-4">
           <div className="stat-icon badge-success-custom flex-shrink-0">

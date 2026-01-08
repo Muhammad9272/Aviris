@@ -2,8 +2,11 @@ import type { Metadata } from 'next';
 import './auth.css';
 
 export const metadata: Metadata = {
-  title: 'Login - AVIRIS',
-  description: 'Sign in to AVIRIS Dashboard',
+  title: {
+    default: 'Authentication - AVIRIS',
+    template: '%s - AVIRIS',
+  },
+  description: 'Sign in or create your AVIRIS account to access advanced VPN protection, AI threat detection, and comprehensive cybersecurity features.',
 };
 
 export default function AuthLayout({

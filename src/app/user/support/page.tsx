@@ -1,9 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function SupportPage() {
+  useEffect(() => {
+    document.title = 'Support Center - AVIRIS | Get Help & Submit Tickets';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Get expert help with AVIRIS security solutions. Submit support tickets, contact our 24/7 security team, and find answers to your VPN and cybersecurity questions.');
+    }
+  }, []);
+
   const [formData, setFormData] = useState({
     firstName: 'Tolga',
     lastName: 'Akcay',

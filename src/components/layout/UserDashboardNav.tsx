@@ -20,15 +20,15 @@ export default function UserDashboardNav() {
       <header className="top-header">
         <div className="container-fluid px-4 py-1 py-md-3">
           <div className="d-flex justify-content-between align-items-center">
-            <div className="d-flex align-items-center gap-2">
+            <Link href="/" className="d-flex align-items-center gap-2">
               <Image 
-                src="/front/img/logo.png" 
+                src="/user/img/logo.png" 
                 alt="AVIRIS" 
                 width={160} 
                 height={38}
                 className="logo-img" 
               />
-            </div>
+            </Link>
             <div className="d-flex align-items-center gap-3">
               <div className="premium-badge px-3 py-2 rounded-2 d-flex align-items-center gap-2 d-none d-lg-flex">
                 <i className="ri-vip-crown-fill"></i>
@@ -132,13 +132,15 @@ export default function UserDashboardNav() {
       <div className={`offcanvas offcanvas-start ${showMobileSidebar ? 'show' : ''}`} tabIndex={-1} style={{ visibility: showMobileSidebar ? 'visible' : 'hidden', zIndex: 1045 }}>
         <div className="offcanvas-header border-bottom">
           <h5 className="offcanvas-title d-flex align-items-center gap-3">
-            <Image 
-              src="/front/img/logo.png" 
-              alt="AVIRIS" 
-              width={120} 
-              height={32}
-              style={{ height: '32px' }}
-            />
+            <Link href="/" onClick={() => setShowMobileSidebar(false)}>
+              <Image 
+                src="/front/img/logo.png" 
+                alt="AVIRIS" 
+                width={120} 
+                height={32}
+                style={{ height: '32px' }}
+              />
+            </Link>
             <div className="premium-badge px-2 py-1 rounded-2 d-flex align-items-center gap-2" style={{ fontSize: '12px' }}>
               <i className="ri-vip-crown-fill"></i>
               <span>Premium</span>

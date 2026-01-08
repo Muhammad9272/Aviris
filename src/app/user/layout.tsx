@@ -7,8 +7,11 @@ import Sidebar from '@/components/layout/Sidebar';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Dashboard - AVIRIS',
-  description: 'AVIRIS User Dashboard',
+  title: {
+    default: 'Dashboard - AVIRIS | Security Management',
+    template: '%s - AVIRIS',
+  },
+  description: 'Manage your AVIRIS security account, monitor devices, control licenses, and access advanced cybersecurity features.',
 };
 
 export default function DashboardLayout({

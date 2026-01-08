@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Downloads - AVIRIS | Get Apps for All Your Devices',
+  description: 'Download AVIRIS security applications for Windows, macOS, Android, iOS, and Linux. Protect all your devices with comprehensive VPN, antivirus, and AI-powered threat detection.',
+};
+
 export default function DownloadsPage() {
   const downloads = [
     {

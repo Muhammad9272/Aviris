@@ -1,8 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function SettingsPage() {
+  useEffect(() => {
+    document.title = 'Configuration - AVIRIS | Language & System Preferences';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Configure your AVIRIS system settings including language, timezone, date format, time format, and notification preferences for optimal user experience.');
+    }
+  }, []);
+
   const [language, setLanguage] = useState({ flag: 'de', text: 'German (Default)' });
   const [timezone, setTimezone] = useState({ flag: 'de', text: 'Germany (GMT+2)' });
   const [timeFormat, setTimeFormat] = useState('24');

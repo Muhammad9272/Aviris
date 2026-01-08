@@ -1,9 +1,17 @@
 'use client';
 
+import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function DashboardPage() {
+  useEffect(() => {
+    document.title = 'Dashboard - AVIRIS | Your Security Overview';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Manage your AVIRIS account, view device security status, monitor threats, check subscription plans, and review transaction history from your personalized dashboard.');
+    }
+  }, []);
   return (
     <div className="main-content-wrapper">
       {/* Alert Banner */}
@@ -84,10 +92,10 @@ export default function DashboardPage() {
               <p className="plan-renewal">Renews 13 Jun, 2026</p>
             </div>
             <div className="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3 mt-3 mt-md-0">
-              <Link href="/userdashboard/billing" className="link-primary-custom">
+              <Link href="/user/billing" className="link-primary-custom">
                 Manage Payment Methods
               </Link>
-              <Link href="/userdashboard/pricing" className="btn-link-white">
+              <Link href="/user/pricing" className="btn-link-white">
                 Change Plan
               </Link>
             </div>

@@ -1,4 +1,10 @@
 import PricingCards from '@/components/shared/PricingCards';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Subscription Plans - AVIRIS | Upgrade Your Security',
+  description: 'Browse and compare AVIRIS subscription plans. Upgrade your security package with advanced AI threat detection, multi-device protection, and premium 24/7 support.',
+};
 
 export default function PricingPage() {
   return (

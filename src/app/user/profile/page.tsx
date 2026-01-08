@@ -5,6 +5,14 @@ import Image from 'next/image';
 import PhoneInput from '@/components/shared/PhoneInput';
 
 export default function Profile() {
+  useEffect(() => {
+    document.title = 'Profile Settings - AVIRIS | Manage Your Account';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Update your AVIRIS profile information, change contact details, upload profile picture, manage country and currency preferences, and customize your account settings.');
+    }
+  }, []);
+
   const [profileImage, setProfileImage] = useState('https://ui-avatars.com/api/?name=Tolga+Akcay&background=1a5e4a&color=fff&bold=true&size=150');
   const [firstName, setFirstName] = useState('Tolga');
   const [lastName, setLastName] = useState('Akcay');
