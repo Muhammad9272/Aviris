@@ -1,0 +1,119 @@
+/* ========== Contact Section - Minimal CSS ========== */
+
+
+.contact-info-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 32px 28px;
+    border: 2px solid var(--border-light);
+    margin-bottom: 20px;
+    transition: var(--transition-smooth);
+    height: 100%;
+}
+
+.contact-info-card:hover {
+    border-color: var(--aviris-secondary);
+    box-shadow: 0 8px 32px rgba(22, 163, 74, 0.1);
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.contact-info-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.contact-info-item:first-child {
+    padding-top: 0;
+}
+
+.contact-info-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(22, 163, 74, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-info-icon i {
+    font-size: 22px;
+    color: var(--aviris-secondary);
+}
+
+.contact-info-content h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.contact-info-content p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.contact-info-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--aviris-secondary);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.contact-info-link:hover {
+    color: var(--aviris-primary);
+}
+
+.contact-form-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 48px;
+    border: 2px solid var(--border-light);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    height: 100%;
+}
+
+
+
+.phone-input-wrapper {
+    display: flex;
+    gap: 12px;
+}
+
+.country-code-wrapper {
+    flex: 0 0 120px;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+
+    .contact-form-card {
+        padding: 36px;
+    }
+    .contact-info-card {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-form-card {
+        padding: 28px;
+    }
+    .phone-input-wrapper {
+        flex-direction: column;
+    }
+    .country-code-wrapper {
+        flex: 1;
+    }
+}

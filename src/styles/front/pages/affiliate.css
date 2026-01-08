@@ -1,0 +1,425 @@
+/* ========== Text Colors (Centralized) ========== */
+:root {
+    --text-primary: #374151;
+    --text-secondary: #6B7280;
+    --text-muted: #9CA3AF;
+}
+
+/* ========== Affiliate Page Specific Styles ========== */
+
+/* Benefits Section */
+.benefits-section {
+    padding: 100px 0;
+}
+
+.benefit-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px 32px;
+    height: 100%;
+    border: 2px solid var(--border-light);
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--aviris-secondary);
+    box-shadow: 0 12px 40px rgba(22, 163, 74, 0.15);
+}
+
+.benefit-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(22, 163, 74, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+    background: var(--aviris-secondary);
+}
+
+.benefit-icon i {
+    font-size: 28px;
+    color: var(--aviris-secondary);
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon i {
+    color: white;
+}
+
+.benefit-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.benefit-description {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.benefit-description strong {
+    color: var(--aviris-secondary);
+    font-weight: 700;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    padding: 100px 0;
+}
+
+.step-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px 32px;
+    height: 100%;
+    text-align: center;
+    border: 2px solid var(--border-light);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--aviris-secondary);
+    box-shadow: 0 8px 32px rgba(22, 163, 74, 0.12);
+}
+
+.step-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: rgba(22, 163, 74, 0.2);
+    margin-bottom: 16px;
+    line-height: 1;
+}
+
+.step-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.step-description {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Commission Section */
+.commission-section {
+    padding: 100px 0;
+}
+
+.commission-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 48px 40px;
+    height: 100%;
+    border: 2px solid var(--border-light);
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.commission-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(22, 163, 74, 0.15);
+}
+
+.commission-card.featured {
+    border-color: var(--aviris-secondary);
+    border-width: 3px;
+    box-shadow: 0 12px 48px rgba(22, 163, 74, 0.12);
+    transform: scale(1.02);
+}
+
+.commission-card.featured:hover {
+    transform: scale(1.05) translateY(-8px);
+}
+
+.commission-badge {
+    display: inline-block;
+    background: rgba(22, 163, 74, 0.1);
+    color: var(--aviris-secondary);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.commission-card.featured .commission-badge {
+    background: var(--aviris-secondary);
+    color: white;
+}
+
+.commission-rate {
+    font-size: 64px;
+    font-weight: 800;
+    color: var(--aviris-secondary);
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.commission-description {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.commission-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.commission-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.commission-features li:last-child {
+    margin-bottom: 0;
+}
+
+.commission-features li i {
+    font-size: 16px;
+    color: var(--aviris-secondary);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* Who Section */
+.who-section {
+    padding: 100px 0;
+}
+
+.who-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px 32px;
+    height: 100%;
+    text-align: center;
+    border: 2px solid var(--border-light);
+    transition: all 0.3s ease;
+}
+
+.who-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--aviris-secondary);
+    box-shadow: 0 8px 32px rgba(22, 163, 74, 0.12);
+}
+
+.who-card i {
+    font-size: 48px;
+    color: var(--aviris-secondary);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.who-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.who-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* FAQ Section */
+.affiliate-faq-section {
+    padding: 100px 0;
+}
+
+.accordion-item {
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-button {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    padding: 20px 24px;
+    background: #FFFFFF;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background: rgba(22, 163, 74, 0.05);
+    color: var(--aviris-secondary);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.accordion-button::after {
+    background-image: none;
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--aviris-secondary);
+    transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+}
+
+.accordion-body {
+    padding: 20px 24px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    background: #FFFFFF;
+}
+
+/* CTA Section */
+.affiliate-cta-section {
+    padding: 100px 0;
+}
+
+/* Responsive */
+@media (max-width: 1199.98px) {
+    .benefit-card,
+    .step-card,
+    .who-card {
+        padding: 36px 28px;
+    }
+    
+    .commission-card {
+        padding: 40px 32px;
+    }
+    
+    .commission-rate {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .benefits-section,
+    .how-it-works-section,
+    .commission-section,
+    .who-section,
+    .affiliate-faq-section,
+    .affiliate-cta-section {
+        padding: 80px 0;
+    }
+    
+    .benefit-card,
+    .step-card,
+    .who-card {
+        padding: 32px 24px;
+        margin-bottom: 20px;
+    }
+    
+    .commission-card {
+        padding: 36px 28px;
+        margin-bottom: 30px;
+    }
+    
+    .commission-card.featured {
+        transform: scale(1);
+    }
+    
+    .commission-card.featured:hover {
+        transform: translateY(-8px);
+    }
+    
+    .commission-rate {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .benefits-section,
+    .how-it-works-section,
+    .commission-section,
+    .who-section,
+    .affiliate-faq-section,
+    .affiliate-cta-section {
+        padding: 60px 0;
+    }
+    
+    .benefit-card,
+    .step-card,
+    .who-card {
+        padding: 28px 20px;
+    }
+    
+    .benefit-icon {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .benefit-icon i {
+        font-size: 24px;
+    }
+    
+    .benefit-title,
+    .step-title,
+    .who-card h3 {
+        font-size: 18px;
+    }
+    
+    .step-number {
+        font-size: 40px;
+    }
+    
+    .commission-card {
+        padding: 32px 24px;
+    }
+    
+    .commission-rate {
+        font-size: 48px;
+    }
+    
+    .commission-description {
+        font-size: 14px;
+    }
+    
+    .who-card i {
+        font-size: 40px;
+        margin-bottom: 16px;
+    }
+    
+    .accordion-button {
+        font-size: 15px;
+        padding: 16px 20px;
+    }
+    
+    .accordion-body {
+        padding: 16px 20px;
+        font-size: 13px;
+    }
+}

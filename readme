@@ -1,0 +1,53 @@
+src/
+├── app/
+│   ├── (marketing)/
+│   │   ├── layout.tsx            ← Uses MarketingNav + Footer
+│   │   ├── page.tsx
+│   │   ├── features/
+│   │   │   └── page.tsx
+│   │   └── pricing/
+│   │       └── page.tsx
+│   │
+│   └── (dashboard)/
+│       ├── layout.tsx            ← Uses DashboardNav + Sidebar
+│       ├── page.tsx
+│       ├── settings/
+│       │   └── page.tsx
+│       └── profile/
+│           └── page.tsx
+│
+├── components/
+│   ├── layout/                   ← Layout components
+│   │   ├── MarketingNav.tsx      ← Frontend navbar
+│   │   ├── Footer.tsx            ← Frontend footer
+│   │   ├── DashboardNav.tsx      ← Dashboard navbar
+│   │   └── Sidebar.tsx           ← Dashboard sidebar
+│   │
+│   ├── shared/
+│   │   ├── Testimonials.tsx
+│   │   ├── FAQs.tsx
+│   │   └── CTA.tsx
+│   │
+│   └── ui/
+│       ├── Button.tsx
+│       ├── Card.tsx
+│       └── Badge.tsx
+│
+└── styles/
+    ├── globals.css
+    │
+    ├── layout/                   ← Layout styles
+    │   ├── MarketingNav.module.css
+    │   ├── Footer.module.css
+    │   ├── DashboardNav.module.css
+    │   └── Sidebar.module.css
+    │
+    ├── pages/
+    │   ├── home.module.css
+    │   ├── features.module.css
+    │   └── dashboard.module.css
+    │
+    └── components/
+        ├── Testimonials.module.css
+        ├── FAQs.module.css
+        └── CTA.module.css

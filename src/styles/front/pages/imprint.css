@@ -1,0 +1,245 @@
+/* ========== Text Colors (Centralized) ========== */
+:root {
+    --text-primary: #374151;
+    --text-secondary: #6B7280;
+    --text-muted: #9CA3AF;
+}
+
+/* ========== Imprint Page Specific Styles ========== */
+
+
+.imprint-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px;
+    border: 2px solid var(--border-light);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.imprint-card:hover {
+    border-color: var(--aviris-secondary);
+    box-shadow: 0 8px 32px rgba(22, 163, 74, 0.1);
+}
+
+.imprint-card:last-of-type {
+    margin-bottom: 0;
+}
+
+.imprint-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border-light);
+}
+
+.imprint-heading i {
+    font-size: 28px;
+    color: var(--aviris-secondary);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(22, 163, 74, 0.1);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.imprint-content {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+.imprint-content p {
+    margin-bottom: 16px;
+}
+
+.imprint-content p:last-child {
+    margin-bottom: 0;
+}
+
+.imprint-content strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.imprint-link {
+    color: var(--aviris-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.imprint-link:hover {
+    color: var(--aviris-primary);
+    text-decoration: underline;
+}
+
+/* Info Box */
+.imprint-info {
+    background: rgba(22, 163, 74, 0.05);
+    border: 2px solid rgba(22, 163, 74, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.imprint-info i {
+    font-size: 24px;
+    color: var(--aviris-secondary);
+    margin-right: 8px;
+}
+
+.imprint-info p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.imprint-info strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+/* Company Details Styling */
+.imprint-content p.mb-1 {
+    margin-bottom: 8px;
+}
+
+.imprint-content p.mb-3 {
+    margin-bottom: 24px;
+}
+
+.imprint-content p.mb-0 {
+    margin-bottom: 0;
+}
+
+/* Last Updated Text */
+.text-muted {
+    color: var(--text-muted);
+}
+
+.text-muted.small {
+    font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 1199.98px) {
+    .imprint-card {
+        padding: 36px;
+    }
+    
+    .imprint-heading {
+        font-size: 22px;
+    }
+    
+    .imprint-heading i {
+        font-size: 26px;
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .imprint-section {
+        padding: 80px 0;
+    }
+    
+    .imprint-card {
+        padding: 32px;
+        margin-bottom: 24px;
+    }
+    
+    .imprint-heading {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .imprint-heading i {
+        font-size: 24px;
+        width: 36px;
+        height: 36px;
+    }
+    
+    .imprint-content {
+        font-size: 14px;
+    }
+    
+    .imprint-info {
+        padding: 20px;
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .imprint-section {
+        padding: 60px 0;
+    }
+    
+    .imprint-card {
+        padding: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .imprint-heading {
+        font-size: 18px;
+        gap: 12px;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+    }
+    
+    .imprint-heading i {
+        font-size: 20px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .imprint-content {
+        font-size: 13px;
+    }
+    
+    .imprint-content p {
+        margin-bottom: 12px;
+    }
+    
+    .imprint-info {
+        padding: 16px;
+        margin-top: 20px;
+    }
+    
+    .imprint-info i {
+        font-size: 20px;
+        display: block;
+        margin: 0 0 8px 0;
+    }
+    
+    .imprint-info p {
+        font-size: 13px;
+    }
+}
+
+/* Hero Section Override */
+.hero-section {
+    padding: 140px 0 60px;
+}
+
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding: 120px 0 50px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding: 100px 0 40px;
+    }
+}

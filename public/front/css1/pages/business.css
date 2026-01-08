@@ -1,0 +1,633 @@
+
+/* ========== Business Features Grid Section ========== */
+
+
+.feature-image-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.feature-image-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.feature-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Remove left border-radius for left sub-column */
+.feature-no-left-radius {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Remove right border-radius for right column */
+.feature-no-right-radius {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Equal Heights */
+.features-row-left,
+.features-row-right {
+    height: 100%;
+}
+
+.feature-col-full {
+    height: 620px;
+}
+
+.feature-col-half {
+    height: 300px;
+}
+
+/* Responsive */
+@media (max-width: 1199.98px) {
+    .feature-col-full { height: 560px; }
+    .feature-col-half { height: 270px; }
+}
+
+@media (max-width: 991.98px) {
+    
+    .feature-col-full { height: 480px; }
+    .feature-col-half { height: 230px; }
+}
+
+@media (max-width: 767.98px) {
+   
+    .feature-col-full,
+    .feature-col-half {
+        height: 280px;
+        margin-bottom: 20px;
+    }
+    /* Restore all border-radius on mobile */
+    .feature-no-left-radius,
+    .feature-no-right-radius {
+        border-radius: 24px;
+    }
+}
+
+/* Full height columns */
+.feature-col-full {
+    height: 100%;
+    min-height: 300px;
+}
+
+/* Half height columns */
+.feature-col-half {
+    height: 100%;
+    min-height: 145px;
+}
+
+
+/* ========== Business Benefits Section ========== */
+.business-benefits-section {
+    padding: 100px 0;
+    background: var(--bg-dark);
+}
+
+.benefit-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 48px 32px;
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--aviris-secondary);
+    box-shadow: 0 12px 40px rgba(22, 163, 74, 0.15);
+}
+
+.benefit-icon-wrapper {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.benefit-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.benefit-title span {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.benefit-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1199.98px) {
+    .benefit-card {
+        padding: 40px 28px;
+    }
+    .benefit-icon-wrapper {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 24px;
+    }
+    .benefit-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .business-benefits-section {
+        padding: 80px 0;
+    }
+    .benefit-card {
+        padding: 36px 24px;
+    }
+    .benefit-icon-wrapper {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+    .benefit-title {
+        font-size: 19px;
+        margin-bottom: 14px;
+    }
+    .benefit-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .business-benefits-section {
+        padding: 60px 0;
+    }
+    .benefit-card {
+        padding: 32px 20px;
+        margin-bottom: 20px;
+    }
+    .benefit-icon-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+    .benefit-title {
+        font-size: 18px;
+    }
+}
+/* ========== Pricing Section ========== */
+.pricing-section {
+    padding: 100px 0;
+}
+
+.pricing-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 48px 40px;
+    height: 100%;
+    border: 2px solid #F1F5F9;
+    transition: all 0.4s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--aviris-secondary);
+    box-shadow: 0 20px 60px rgba(22, 163, 74, 0.15);
+}
+
+.pricing-card.featured {
+    border-color: var(--aviris-secondary);
+    border-width: 3px;
+    box-shadow: 0 12px 48px rgba(22, 163, 74, 0.12);
+}
+
+.pricing-icon-wrapper {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.pricing-plan-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #374151;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.pricing-devices {
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.pricing-target {
+    font-size: 15px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.pricing-cta {
+    margin-top: auto;
+}
+
+.btn-pricing-white {
+    width: 100%;
+    background: #FFFFFF;
+    color: #374151;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 24px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.btn-pricing-white:hover {
+    background: var(--bg-dark);
+    border-color: var(--aviris-secondary);
+    color: var(--aviris-secondary);
+}
+
+.btn-pricing-green {
+    width: 100%;
+    background: var(--aviris-secondary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 24px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.btn-pricing-green:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(22, 163, 74, 0.3);
+    color: white;
+}
+
+.btn-pricing-dark {
+    width: 100%;
+    background: #1F2937;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 24px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.btn-pricing-dark:hover {
+    background: #374151;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(31, 41, 55, 0.3);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 1199.98px) {
+    .pricing-card {
+        padding: 40px 32px;
+    }
+    .pricing-icon-wrapper {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 24px;
+    }
+    .pricing-plan-name {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .pricing-section {
+        padding: 80px 0;
+    }
+    .pricing-card {
+        padding: 36px 28px;
+    }
+    .pricing-icon-wrapper {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+    .pricing-plan-name {
+        font-size: 24px;
+    }
+    .pricing-devices {
+        font-size: 15px;
+    }
+    .pricing-target {
+        font-size: 14px;
+        margin-bottom: 28px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .pricing-section {
+        padding: 60px 0;
+    }
+    .pricing-card {
+        padding: 32px 24px;
+        margin-bottom: 20px;
+    }
+    .pricing-plan-name {
+        font-size: 22px;
+    }
+}
+/* ========== Digital Operations Section ========== */
+.digital-operations-section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.operations-image-wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.operations-image-bg {
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    background: var(--bg-dark);
+    border-radius: 30px;
+    z-index: 1;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.operations-image {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    width: 100%;
+    display: block;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.operations-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.operations-features-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #374151;
+    font-weight: 500;
+}
+
+.operations-feature-icon {
+    font-size: 18px;
+    color: var(--aviris-secondary);
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(22, 163, 74, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.operations-features-list li:hover .operations-feature-icon {
+    background: rgba(22, 163, 74, 0.15);
+    transform: scale(1.05);
+}
+
+
+/* Trusted Partners Section */
+.trusted-partners-section {
+    padding: 60px 0;
+    background: var(--bg-light);
+}
+
+.partner-logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+    padding: 20px;
+}
+
+.partner-logo-item:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.partner-logo-item img {
+    max-height: 45px;
+    width: auto;
+    max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1199.98px) {
+    .operations-image-wrapper {
+        min-height: 450px;
+    }
+    .operations-image-bg {
+        max-width: 550px;
+        height: 450px;
+    }
+    .operations-image {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .digital-operations-section {
+        padding: 80px 0;
+    }
+    .operations-image-wrapper {
+        min-height: 400px;
+        margin-bottom: 40px;
+    }
+    .operations-image-bg {
+        max-width: 500px;
+        height: 400px;
+    }
+    .operations-image {
+        max-width: 500px;
+    }
+    .operations-features-list {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .operations-features-list li {
+        font-size: 14px;
+    }
+    .operations-feature-icon {
+        font-size: 16px;
+        width: 34px;
+        height: 34px;
+    }
+    .trusted-partners-section {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .digital-operations-section {
+        padding: 60px 0;
+    }
+    .operations-image-wrapper {
+        min-height: 350px;
+        margin-bottom: 30px;
+    }
+    .operations-image-bg {
+        max-width: 400px;
+        height: 350px;
+        border-radius: 24px;
+    }
+    .operations-image {
+        max-width: 400px;
+        border-radius: 24px;
+    }
+    .operations-features-list {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .operations-features-list li {
+        font-size: 13px;
+    }
+    .operations-feature-icon {
+        font-size: 15px;
+        width: 32px;
+        height: 32px;
+    }
+    .trusted-partners-section {
+        padding: 40px 0;
+    }
+    .partner-logo-item img {
+        max-height: 35px;
+    }
+}
+
+/* ========== Quotation Section - Minimal CSS ========== */
+.quotation-section {
+    padding: 100px 0;
+}
+
+.quotation-form-wrapper {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 48px;
+    border: 2px solid var(--border-light);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+
+
+.country-code-select {
+    flex: 0 0 140px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 12px;
+    background: var(--bg-dark);
+}
+
+
+/* Responsive */
+@media (max-width: 1199.98px) {
+    .quotation-form-wrapper {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .quotation-section {
+        padding: 80px 0;
+    }
+    .quotation-form-wrapper {
+        padding: 36px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .quotation-section {
+        padding: 60px 0;
+    }
+    .quotation-form-wrapper {
+        padding: 28px;
+    }
+
+    .country-code-select {
+        flex: 1;
+    }
+    .form-group {
+        margin-bottom: 16px;
+    }
+}

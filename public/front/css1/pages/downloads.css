@@ -1,0 +1,827 @@
+  /* ========== Download Section ========== */
+
+
+.download-content {
+    max-width: 580px;
+}
+
+
+/* Features List */
+.download-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 36px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.download-features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 16px;
+    color: #374151;
+    line-height: 1.6;
+}
+
+.download-features-list li i {
+    font-size: 22px;
+    color: var(--aviris-secondary);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Download Buttons */
+.download-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+/* Note */
+.download-note {
+    font-size: 15px;
+    color: #6B7280;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Download Image */
+.download-image-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-image {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    transition: all 0.3s ease;
+}
+
+.download-image:hover {
+    transform: translateY(-8px);
+}
+
+/* Responsive Design */
+@media (max-width: 1199.98px) {
+
+
+    .download-features-list li {
+        font-size: 15px;
+    }
+
+    .download-image {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 991.98px) {
+  
+
+    .download-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+
+
+    .download-features-list {
+        margin-bottom: 32px;
+        gap: 14px;
+    }
+
+    .download-features-list li {
+        font-size: 15px;
+    }
+
+    .download-features-list li i {
+        font-size: 20px;
+    }
+
+    .download-image {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .download-features-list {
+        margin-bottom: 28px;
+        gap: 12px;
+    }
+
+    .download-features-list li {
+        font-size: 14px;
+        gap: 12px;
+    }
+
+    .download-features-list li i {
+        font-size: 18px;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .download-buttons .btn-secondary-custom,
+    .download-buttons .btn-outline-custom {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .download-note {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .download-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+
+    .download-features-list li {
+        font-size: 13px;
+    }
+
+    .download-note {
+        font-size: 13px;
+    }
+}
+
+
+
+
+/* ========== Devices Download Section ========== */
+.devices-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.device-signup-link {
+    color: var(--aviris-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.device-signup-link:hover {
+    color: var(--aviris-primary);
+    text-decoration: underline;
+}
+
+/* Device Card */
+.device-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: #FFFFFF;
+    border: 2px solid #E5E7EB;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-height: 180px;
+    cursor: pointer;
+}
+
+.device-card:hover {
+    border-color: var(--aviris-secondary);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.device-card.active {
+    border-color: var(--aviris-secondary);
+    background: #FFFFFF;
+    box-shadow: 0 8px 24px rgba(22, 163, 74, 0.15);
+}
+
+.device-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.device-card:hover .device-icon-wrapper {
+    transform: scale(1.1);
+}
+
+.device-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.device-card.active .device-icon {
+    filter: none;
+}
+
+.device-card:not(.active) .device-icon {
+    opacity: 0.6;
+    filter: grayscale(0.3);
+}
+
+.device-card:hover .device-icon {
+    opacity: 1;
+    filter: none;
+}
+
+.device-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #374151;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.device-card:not(.active) .device-name {
+    color: #9CA3AF;
+}
+
+.device-card:hover .device-name,
+.device-card.active .device-name {
+    color: #374151;
+}
+
+/* Responsive Design */
+@media (max-width: 1199.98px) {
+    .device-card {
+        padding: 36px 18px;
+        min-height: 170px;
+    }
+
+    .device-icon-wrapper {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 18px;
+    }
+
+    .device-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .device-name {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .devices-section {
+        padding: 80px 0;
+    }
+
+    .device-card {
+        padding: 32px 16px;
+        min-height: 160px;
+    }
+
+    .device-icon-wrapper {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 16px;
+    }
+
+    .device-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .device-name {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .devices-section {
+        padding: 60px 0;
+    }
+
+    .device-card {
+        padding: 28px 14px;
+        min-height: 150px;
+    }
+
+    .device-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 14px;
+    }
+
+    .device-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .device-name {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .device-card {
+        padding: 24px 12px;
+        min-height: 140px;
+    }
+
+    .device-icon-wrapper {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 12px;
+    }
+
+    .device-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .device-name {
+        font-size: 14px;
+    }
+}
+
+/* ========== Advantages Comparison Section ========== */
+.advantages-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+/* Comparison Cards */
+.comparison-card {
+    background: transparent;
+    border-radius: 20px;
+    padding: 36px;
+    height: 100%;
+    border: 2px solid;
+    transition: all 0.3s ease;
+}
+
+.aviris-card {
+    border-color: #D1FAE5;
+    background: rgba(240, 253, 244, 0.5);
+}
+
+.aviris-card:hover {
+    background: rgba(240, 253, 244, 0.8);
+    border-color: var(--aviris-success);
+    box-shadow: 0 12px 32px rgba(34, 197, 94, 0.15);
+    transform: translateY(-4px);
+}
+
+.conventional-card {
+    border-color: #FEE2E2;
+    background: rgba(254, 242, 242, 0.5);
+}
+
+.conventional-card:hover {
+    background: rgba(254, 242, 242, 0.8);
+    border-color: var(--aviris-danger);
+    box-shadow: 0 12px 32px rgba(239, 68, 68, 0.1);
+    transform: translateY(-4px);
+}
+
+.comparison-card-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid;
+}
+
+.aviris-card .comparison-card-title {
+    border-color: var(--aviris-success);
+}
+
+.conventional-card .comparison-card-title {
+    border-color: var(--aviris-danger);
+}
+
+.comparison-card-title .title-highlight {
+    color: var(--aviris-success);
+}
+
+/* Comparison List */
+.comparison-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Comparison Item */
+.comparison-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.comparison-item-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    width: 100%;
+}
+
+.comparison-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.comparison-item.positive .comparison-icon {
+    color: var(--aviris-success);
+}
+
+.comparison-item.negative .comparison-icon {
+    color: var(--aviris-danger);
+}
+
+.comparison-item-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.comparison-item-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.comparison-item-description {
+    font-size: 14px;
+    color: #6B7280;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1199.98px) {
+    .comparison-card {
+        padding: 32px;
+    }
+
+    .comparison-card-title {
+        font-size: 20px;
+        margin-bottom: 24px;
+        padding-bottom: 18px;
+    }
+
+    .comparison-list {
+        gap: 20px;
+    }
+
+    .comparison-item-title {
+        font-size: 15px;
+    }
+
+    .comparison-item-description {
+        font-size: 13px;
+    }
+
+    .comparison-icon {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .advantages-section {
+        padding: 80px 0;
+    }
+
+    .comparison-card {
+        padding: 28px;
+        margin-bottom: 24px;
+    }
+
+    .comparison-card-title {
+        font-size: 19px;
+        margin-bottom: 22px;
+        padding-bottom: 16px;
+    }
+
+    .comparison-list {
+        gap: 18px;
+    }
+
+    .comparison-item-header {
+        gap: 12px;
+    }
+
+    .comparison-item-title {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .comparison-item-description {
+        font-size: 13px;
+    }
+
+    .comparison-icon {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .advantages-section {
+        padding: 60px 0;
+    }
+
+    .comparison-card {
+        padding: 24px;
+        margin-bottom: 20px;
+    }
+
+    .comparison-card-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+        padding-bottom: 14px;
+    }
+
+    .comparison-list {
+        gap: 16px;
+    }
+
+    .comparison-item-header {
+        gap: 10px;
+    }
+
+    .comparison-item-title {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .comparison-item-description {
+        font-size: 12px;
+    }
+
+    .comparison-icon {
+        font-size: 18px;
+        margin-top: 2px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .comparison-card {
+        padding: 20px;
+    }
+
+    .comparison-card-title {
+        font-size: 17px;
+    }
+
+    .comparison-item-title {
+        font-size: 13px;
+    }
+
+    .comparison-item-description {
+        font-size: 12px;
+    }
+}
+
+/* ========== How To Download Section ========== */
+.howto-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.howto-header {
+    max-width: 800px;
+}
+
+
+
+/* Step Cards */
+.step-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px 32px;
+    height: 100%;
+    border: 2px solid #F1F5F9;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.step-card:hover {
+    border-color: var(--aviris-secondary);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(22, 163, 74, 0.12);
+}
+
+.step-number {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--aviris-secondary);
+    line-height: 1;
+    margin-bottom: 24px;
+}
+
+.step-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.step-title .text-muted {
+    color: #9CA3AF;
+    font-weight: 600;
+}
+
+.step-description {
+    font-size: 15px;
+    color: #6B7280;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.step-link {
+    color: var(--aviris-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.step-link:hover {
+    color: var(--aviris-primary);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1199.98px) {
+
+    .step-card {
+        padding: 36px 28px;
+    }
+
+    .step-number {
+        font-size: 52px;
+        margin-bottom: 20px;
+    }
+
+    .step-title {
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+
+    .step-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .howto-section {
+        padding: 80px 0;
+    }
+
+
+
+    .step-card {
+        padding: 32px 26px;
+    }
+
+    .step-number {
+        font-size: 48px;
+        margin-bottom: 18px;
+    }
+
+    .step-title {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .howto-section {
+        padding: 60px 0;
+    }
+
+    .step-card {
+        padding: 28px 24px;
+        margin-bottom: 20px;
+    }
+
+    .step-number {
+        font-size: 44px;
+        margin-bottom: 16px;
+    }
+
+    .step-title {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .step-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+
+    .step-card {
+        padding: 24px 20px;
+    }
+
+    .step-number {
+        font-size: 40px;
+    }
+
+    .step-title {
+        font-size: 19px;
+    }
+
+    .step-description {
+        font-size: 13px;
+    }
+}
+
+/* ========== Experience Section ========== */
+.experience-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.experience-content {
+    max-width: 600px;
+}
+
+/* Experience Image */
+.experience-image-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-image {
+    width: 100%;
+    height: auto;
+    max-width: 650px;
+    transition: all 0.3s ease;
+}
+
+.experience-image:hover {
+    transform: translateY(-8px);
+}
+
+/* Responsive Design */
+@media (max-width: 1199.98px) {
+
+    .experience-image {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .experience-section {
+        padding: 80px 0;
+    }
+
+    .experience-content {
+        max-width: 100%;
+    }
+
+    .experience-image {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .experience-section {
+        padding: 60px 0;
+    }
+
+ 
+
+
+
+    .experience-image {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,233 @@
+
+    /* Swiper Container with Fade Effect */
+    .testimonials-swiper-container {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .testimonials-swiper-container::before,
+    .testimonials-swiper-container::after {
+        content: '';
+        position: absolute;
+        top: -20px;
+        bottom: -20px;
+        width: 150px;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    .testimonials-swiper-container::before {
+        left: 0;
+        background: linear-gradient(to right, var(--bg-dark) 0%, rgba(249, 250, 251, 0) 100%);
+    }
+
+    .testimonials-swiper-container::after {
+        right: 0;
+        background: linear-gradient(to left, var(--bg-dark) 0%, rgba(249, 250, 251, 0) 100%);
+    }
+
+    .testimonialSwiper {
+        padding-bottom: 80px;
+        overflow: visible;
+    }
+
+    .testimonialSwiper .swiper-wrapper {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    /* Video Container */
+    .testimonial-video {
+        position: relative;
+        aspect-ratio: 16/9;
+        background: #000;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .video-player {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Play Button Overlay */
+    .video-play-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.3);
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .video-play-overlay.playing {
+        opacity: 0;
+    }
+
+    .video-play-icon {
+        width: 70px;
+        height: 70px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+    }
+
+    .testimonial-video:hover .video-play-icon {
+        transform: scale(1.1);
+    }
+
+    .video-play-icon i {
+        font-size: 24px;
+        color: var(--aviris-secondary);
+        margin-left: 4px;
+    }
+
+    /* Video Controls */
+    .video-controls {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        display: flex;
+        gap: 8px;
+        z-index: 2;
+    }
+
+    .video-control-btn {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .video-control-btn:hover {
+        background: #fff;
+        transform: scale(1.05);
+    }
+
+    .video-control-btn i {
+        font-size: 16px;
+        color: #374151;
+    }
+
+    /* Navigation Buttons */
+    .testimonial-navigation {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 12px;
+        z-index: 20;
+    }
+
+    .testimonial-nav-btn {
+        width: 48px;
+        height: 48px;
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        color: #374151;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative !important; /* Override Swiper's absolute positioning */
+        left: auto !important; /* Remove Swiper's default left positioning */
+        right: auto !important; /* Remove Swiper's default right positioning */
+        top: auto !important; /* Remove Swiper's default top positioning */
+        bottom: auto !important; /* Remove Swiper's default bottom positioning */
+        margin: 0 !important; /* Remove any default margins */
+        transform: none !important; /* Remove any transform */
+    }
+
+    .testimonial-nav-btn:after {
+        content: '';
+    }
+
+    .testimonial-nav-btn:hover:not(.swiper-button-disabled) {
+        background: var(--aviris-secondary);
+        color: white;
+        border-color: var(--aviris-secondary);
+        box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .swiper-button-disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991.98px) {
+        .testimonials-swiper-container::before,
+        .testimonials-swiper-container::after {
+            width: 100px;
+        }
+        .testimonialSwiper .swiper-wrapper {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .video-play-icon {
+            width: 60px;
+            height: 60px;
+        }
+        .video-play-icon i {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .testimonials-swiper-container::before,
+        .testimonials-swiper-container::after {
+            width: 80px;
+        }
+        .testimonialSwiper {
+            padding-bottom: 60px;
+        }
+        .testimonialSwiper .swiper-wrapper {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .video-play-icon {
+            width: 50px;
+            height: 50px;
+        }
+        .video-play-icon i {
+            font-size: 18px;
+        }
+        .video-control-btn {
+            width: 36px;
+            height: 36px;
+        }
+        .video-control-btn i {
+            font-size: 14px;
+        }
+        .video-controls {
+            bottom: 12px;
+            right: 12px;
+        }
+        .testimonial-nav-btn {
+            width: 40px;
+            height: 40px;
+        }
+        .testimonial-nav-btn i {
+            font-size: 16px;
+        }
+    }

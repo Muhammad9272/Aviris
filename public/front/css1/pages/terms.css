@@ -1,0 +1,81 @@
+/* ========== Text Colors (Centralized) ========== */
+:root {
+    --text-primary: #374151;
+    --text-secondary: #6B7280;
+    --text-muted: #9CA3AF;
+}
+
+/* ========== Minimal Custom CSS ========== */
+.terms-navigation::-webkit-scrollbar { width: 6px; }
+.terms-navigation::-webkit-scrollbar-track { background: transparent; }
+.terms-navigation::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 10px; }
+.terms-navigation::-webkit-scrollbar-thumb:hover { background: var(--aviris-secondary); }
+.terms-navigation { scrollbar-width: thin; scrollbar-color: #D1D5DB transparent; }
+
+.terms-nav-link {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+.terms-nav-link:hover {
+    transform: translateX(2px);
+}
+.terms-nav-link.active {
+    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
+}
+
+.terms-highlight-box {
+    background: rgba(22, 163, 74, 0.05);
+    border-left: 4px solid var(--aviris-secondary);
+    padding: 24px;
+    border-radius: 12px;
+    margin: 24px 0;
+}
+
+.withdrawal-form-box {
+    background: #F9FAFB;
+    border: 2px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* ========== New Internal CSS (Previously Inline) ========== */
+.hero-section {
+    padding: 140px 0 60px;
+}
+
+.last-updated {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.terms-navigation-sticky {
+    top: 100px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.nav-link-text {
+    font-size: 13px;
+}
+
+.content-text {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.section-scroll-margin {
+    scroll-margin-top: 100px;
+}
+
+.company-info-text {
+    font-size: 14px;
+}
+
+.company-info-label {
+    min-width: 140px;
+}
