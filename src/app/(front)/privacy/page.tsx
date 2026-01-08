@@ -240,7 +240,6 @@ const dataSubjectRights = [
   { icon: 'fa-balance-scale', title: 'Right to Lodge a Complaint (Art. 77)', description: 'File a complaint with a supervisory authority' }
 ];
 
-export default function Privacy() {
   useEffect(() => {
     // Smooth scroll for navigation links
     const links = document.querySelectorAll('.privacy-nav-link');

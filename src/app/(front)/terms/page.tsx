@@ -237,7 +237,6 @@ const companyInfo = [
   { icon: 'fa-globe', label: 'Website:', value: 'www.aviris.com', link: 'https://www.aviris.com' }
 ];
 
-export default function Terms() {
   useEffect(() => {
     // Smooth scroll for navigation links
     const links = document.querySelectorAll('.terms-nav-link');
