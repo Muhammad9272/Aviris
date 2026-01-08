@@ -13,8 +13,6 @@ export default function Terms() {
     }
   }, []);
 
-const termsData = [
-
   const termsData = [
   {
     id: 1,

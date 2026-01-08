@@ -13,8 +13,6 @@ export default function Privacy() {
     }
   }, []);
 
-const privacyData = [
-
   const privacyData = [
   {
     id: 1,
