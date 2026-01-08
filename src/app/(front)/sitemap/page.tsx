@@ -25,9 +25,9 @@ export default function SitemapPage() {
   return (
     <>
       {/* Header */}
-      <section className="py-5 mt-5 bg-light border-bottom">
+      <section className="py-5 bg-light border-bottom mt-5">
         <div className="container">
-          <div className="row justify-content-center">
+          <div className="row justify-content-center mt-5">
             <div className="col-lg-8 text-center">
               <h1 className="mb-2">Sitemap</h1>
               <p className="text-muted mb-0">All AVIRIS pages organized by category</p>
