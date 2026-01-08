@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import '@/styles/front/pages/pricing.css';
 
 export const metadata: Metadata = {
-  title: 'AVIRIS Pricing - Affordable Antivirus & VPN Plans | Free & Premium Security',
+  title: 'Pricing - AVIRIS | Affordable Antivirus & VPN Plans',
   description: 'Compare AVIRIS pricing plans: Free basic protection or Premium with AI threat detection, unlimited VPN, system optimizer, and 24/7 support. Starting from €3.99/month. Choose the best security plan for your needs.',
 };
 

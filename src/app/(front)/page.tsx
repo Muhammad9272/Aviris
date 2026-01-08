@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 import '@/styles/front/pages/home.css';
 
 export const metadata: Metadata = {
-  title: 'AVIRIS - Next-Gen AI Antivirus & Cybersecurity Protection',
+  title: 'Home - AVIRIS | Next-Gen AI Antivirus & Cybersecurity Protection',
   description: 'Stay Protected. Stay Private. Stay AVIRIS. Advanced AI-powered cybersecurity for Windows, Android & iOS. Real-time threat detection, VPN, system optimizer & more.',
 };
 

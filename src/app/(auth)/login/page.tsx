@@ -1,10 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Login() {
+  useEffect(() => {
+    document.title = 'Login - AVIRIS | Sign In to Your Account';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Sign in to your AVIRIS account. Access your dashboard, manage devices, view subscriptions, and control your cybersecurity settings.');
+    }
+  }, []);
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
   const [formData, setFormData] = useState({

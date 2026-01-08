@@ -4,7 +4,18 @@ import { useEffect } from 'react';
 import CTA from '@/components/shared/CTA';
 import '@/styles/front/pages/terms.css';
 
+export default function Terms() {
+  useEffect(() => {
+    document.title = 'Terms & Conditions - AVIRIS | Service Agreement';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Read AVIRIS Terms & Conditions. Complete terms of service, usage policy, license agreement, and legal information for AVIRIS cybersecurity products.');
+    }
+  }, []);
+
 const termsData = [
+
+  const termsData = [
   {
     id: 1,
     title: 'Provider, Scope and Contracting Parties',

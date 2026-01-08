@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 export default function SettingsPage() {
   useEffect(() => {
-    document.title = 'Configuration - AVIRIS | Language & System Preferences';
+    document.title = 'Settings - AVIRIS | Language & Preferences';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Configure your AVIRIS system settings including language, timezone, date format, time format, and notification preferences for optimal user experience.');

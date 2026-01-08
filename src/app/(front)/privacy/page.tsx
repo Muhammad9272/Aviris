@@ -4,7 +4,18 @@ import { useEffect } from 'react';
 import CTA from '@/components/shared/CTA';
 import '@/styles/front/pages/privacy.css';
 
+export default function Privacy() {
+  useEffect(() => {
+    document.title = 'Privacy Policy - AVIRIS | Data Protection & Security';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'AVIRIS Privacy Policy. Learn how we protect your data, handle personal information, comply with GDPR, and ensure your privacy with our cybersecurity solutions.');
+    }
+  }, []);
+
 const privacyData = [
+
+  const privacyData = [
   {
     id: 1,
     title: 'Controller and General Information',

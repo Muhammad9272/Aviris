@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 import '@/styles/front/pages/downloads.css';
 
 export const metadata: Metadata = {
-  title: 'Download AVIRIS - Free Antivirus for Windows, Android & iOS',
+  title: 'Downloads - AVIRIS | Free Antivirus for All Devices',
   description: 'Download AVIRIS antivirus for free. Available for Windows, MacOS, Android & iOS. Get AI-powered protection, VPN & system optimizer now.',
 };
 

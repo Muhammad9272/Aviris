@@ -14,7 +14,7 @@ interface License {
 
 export default function LicenseManagement() {
   useEffect(() => {
-    document.title = 'License Management - AVIRIS | Manage Team Access & Devices';
+    document.title = 'Licenses - AVIRIS | Team Access & Devices';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Manage your AVIRIS licenses, invite team members, allocate device slots, track license status, and control access to your organization\'s security resources and features.');
@@ -349,7 +349,7 @@ export default function LicenseManagement() {
                 <th style={{width: '150px'}}>License ID</th>
                 <th>Email Address</th>
                 <th style={{width: '100px'}}>Slots</th>
-                <th style={{width: '140px'}}>Expires on</th>
+                <th style={{width: '130px', whiteSpace: 'nowrap', fontSize: '0.875rem'}}>Expires on</th>
                 <th style={{width: '120px'}}>Status</th>
                 <th style={{width: '80px'}}>Action</th>
               </tr>
@@ -372,7 +372,7 @@ export default function LicenseManagement() {
                       <span className="text-muted">-</span>
                     )}
                   </td>
-                  <td className="fw-bold">{license.expiresOn}</td>
+                  <td className="fw-semibold" style={{whiteSpace: 'nowrap', fontSize: '0.875rem'}}>{license.expiresOn}</td>
                   <td>
                     <span className={`badge-custom ${getStatusBadgeClass(license.status)}`}>
                       {license.status}
@@ -508,7 +508,7 @@ export default function LicenseManagement() {
             <div className="modal-content border-0 shadow-lg">
               <div className="modal-header border-0 pb-0">
                 <div>
-                  <h5 className="modal-title fw-bold">Invite Member to License Slot(s)</h5>
+                  <h5 className="welcome-heading mb-1 fs-5">Invite Member to License Slot(s)</h5>
                   <p className="text-muted small mb-0">Invite member to give license access!</p>
                 </div>
                 <button 
@@ -525,8 +525,8 @@ export default function LicenseManagement() {
                       <i className="ri-gift-line" style={{color: '#f59e0b', fontSize: '1.5rem'}}></i>
                     </div>
                     <div>
-                      <div className="fw-bold fs-4" style={{color: '#f59e0b'}}>{availableSlots}</div>
-                      <div className="text-muted small">Available Slot License(s)</div>
+                      <div className="fw-bold fs-3" style={{color: '#f59e0b'}}>{availableSlots}</div>
+                      <div className="text-muted">Available Slot License(s)</div>
                     </div>
                     <button 
                       className="btn btn-sm btn-link ms-auto p-0 position-relative text-decoration-none" 
@@ -539,14 +539,14 @@ export default function LicenseManagement() {
                     </button>
                   </div>
                   {showInviteTooltip && (
-                    <div className="position-absolute end-0 mt-2 p-2 rounded shadow-sm" style={{
+                    <div className="position-absolute end-0 mt-2 p-3 rounded shadow-sm" style={{
                       background: '#0B3D2E',
                       color: 'white',
-                      fontSize: '0.75rem',
-                      maxWidth: '200px',
+                      fontSize: '0.8125rem',
+                      maxWidth: '220px',
                       zIndex: 1050
                     }}>
-                      You&apos;ve currently ({availableSlots}) slots available those you can allocate to member(s).
+                      You currently have {availableSlots} slot{availableSlots !== 1 ? 's' : ''} available to allocate to team members.
                     </div>
                   )}
                 </div>
@@ -627,8 +627,8 @@ export default function LicenseManagement() {
             <div className="modal-content border-0 shadow-lg">
               <div className="modal-header border-0 pb-0">
                 <div>
-                  <h5 className="modal-title fw-bold">Edit License Slot(s) Details</h5>
-                  <p className="text-muted small mb-0">Edit Invite member to manage license access!</p>
+                  <h5 className="welcome-heading mb-1 fs-5">Edit License Slot(s) Details</h5>
+                  <p className="text-muted small mb-0">Edit invite member to manage license access!</p>
                 </div>
                 <button 
                   type="button" 
@@ -644,8 +644,8 @@ export default function LicenseManagement() {
                       <i className={needsMoreSlots ? "ri-error-warning-line" : "ri-gift-line"} style={{color: needsMoreSlots ? '#ef4444' : '#f59e0b', fontSize: '1.5rem'}}></i>
                     </div>
                     <div>
-                      <div className="fw-bold fs-4" style={{color: needsMoreSlots ? '#ef4444' : '#f59e0b'}}>{availableSlots}</div>
-                      <div className="text-muted small">Available Slot License(s)</div>
+                      <div className="fw-bold fs-3" style={{color: needsMoreSlots ? '#ef4444' : '#f59e0b'}}>{availableSlots}</div>
+                      <div className="text-muted">Available Slot License(s)</div>
                     </div>
                     <button 
                       className="btn btn-sm btn-link ms-auto p-0 position-relative text-decoration-none" 
@@ -658,14 +658,14 @@ export default function LicenseManagement() {
                     </button>
                   </div>
                   {showTooltip && (
-                    <div className="position-absolute end-0 mt-2 p-2 rounded shadow-sm" style={{
+                    <div className="position-absolute end-0 mt-2 p-3 rounded shadow-sm" style={{
                       background: '#0B3D2E',
                       color: 'white',
-                      fontSize: '0.75rem',
-                      maxWidth: '200px',
+                      fontSize: '0.8125rem',
+                      maxWidth: '220px',
                       zIndex: 1050
                     }}>
-                      You&apos;ve currently ({availableSlots}) slots available those you can allocate to member(s).
+                      You currently have {availableSlots} slot{availableSlots !== 1 ? 's' : ''} available to allocate to team members.
                     </div>
                   )}
                 </div>
@@ -715,9 +715,9 @@ export default function LicenseManagement() {
                 {needsMoreSlots && (
                   <div className="mt-4 p-4 rounded-3" style={{background: 'rgba(251, 191, 36, 0.15)'}}>
                     <div className="text-center mb-3">
-                      <p className="fw-semibold mb-2" style={{color: '#f59e0b'}}>Need more slot(s) to allocate?</p>
-                      <h6 className="fw-bold mb-2">Purchase Additional {slotAllocation - availableSlots} License Slot(s)</h6>
-                      <p className="text-muted small mb-0">
+                      <p className="fw-semibold mb-2" style={{color: '#f59e0b', fontSize: '0.9375rem'}}>Need more slot(s) to allocate?</p>
+                      <h5 className="fw-bold mb-2">Purchase Additional {slotAllocation - availableSlots} License Slot(s)</h5>
+                      <p className="text-muted mb-0">
                         This additional slot will be merge in your editing license plan & will charge with your existing plan tenure on 24 December, 2026
                       </p>
                     </div>
@@ -792,8 +792,8 @@ export default function LicenseManagement() {
                 </div>
 
                 {/* Content */}
-                <h5 className="fw-bold mb-3">Cancel Slot!</h5>
-                <p className="text-muted mb-2">
+                <h5 className="welcome-heading mb-3 fs-5">Cancel Slot!</h5>
+                <p className="text-muted small mb-3">
                   Are you sure you want to cancel <span className="fw-bold" style={{color: '#ef4444'}}>2 license slots</span>?<br/>
                   This action cannot be undone.
                 </p>
@@ -801,7 +801,7 @@ export default function LicenseManagement() {
                 {/* Warning */}
                 <div className="d-flex gap-2 p-3 rounded-3 mb-4 text-start" style={{background: 'rgba(251, 191, 36, 0.1)'}}>
                   <i className="ri-information-line" style={{color: '#f59e0b', fontSize: '1.25rem', flexShrink: 0}}></i>
-                  <p className="text-muted small mb-0">
+                  <p className="text-muted mb-0" style={{fontSize: '0.875rem'}}>
                     AVIRIS will not charge you for these 2 license slots at the next renewal (24 December, 2026). However, you and your assigned members will continue to have access until the end of the current billing period.
                   </p>
                 </div>
@@ -867,8 +867,8 @@ export default function LicenseManagement() {
                 </div>
 
                 {/* Content */}
-                <h5 className="fw-bold mb-3">Remove Member from License</h5>
-                <p className="text-muted mb-4">
+                <h5 className="welcome-heading mb-3 fs-5">Remove Member from License</h5>
+                <p className="text-muted small mb-3">
                   You&apos;re about to remove this member from the selected license slot. Once removed, the member will immediately lose access to AVIRIS features under this license.
                 </p>
 
@@ -889,7 +889,7 @@ export default function LicenseManagement() {
                     checked={confirmRemove}
                     onChange={(e) => setConfirmRemove(e.target.checked)}
                   />
-                  <label className="form-check-label small text-muted" htmlFor="confirmRemove">
+                  <label className="form-check-label text-muted small" htmlFor="confirmRemove">
                     I understand that this member will no longer have access to this license.
                   </label>
                 </div>
@@ -948,8 +948,8 @@ export default function LicenseManagement() {
                 </div>
 
                 {/* Content */}
-                <h5 className="fw-bold mb-3">Invitation Sent Successfully</h5>
-                <p className="text-muted mb-2">
+                <h5 className="welcome-heading mb-3 fs-5">Invitation Sent Successfully</h5>
+                <p className="text-muted small mb-3">
                   Your license invitation has been successfully sent to{' '}
                   <span className="fw-semibold" style={{color: '#22c55e'}}>{inviteEmail}</span>{' '}
                   with <span className="fw-semibold">{slotAllocation} license slots</span> assigned.
@@ -1004,7 +1004,7 @@ export default function LicenseManagement() {
             <div className="modal-content border-0 shadow-lg">
               <div className="modal-header border-0 pb-0">
                 <div>
-                  <h5 className="modal-title fw-bold">Purchase Additional License Slot(s)</h5>
+                  <h5 className="welcome-heading mb-1 fs-5">Purchase Additional License Slot(s)</h5>
                   <p className="text-muted small mb-0">Add more slots to your license plan!</p>
                 </div>
                 <button 

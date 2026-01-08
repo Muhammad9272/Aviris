@@ -1,10 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function ForgotPassword() {
+  useEffect(() => {
+    document.title = 'Forgot Password - AVIRIS | Reset Your Password';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Forgot your AVIRIS password? Reset it securely. Enter your email to receive password reset instructions.');
+    }
+  }, []);
   const [email, setEmail] = useState('tolgaakcay@aviris.com');
 
   const handleSubmit = (e: React.FormEvent) => {

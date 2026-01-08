@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function DashboardPage() {
   useEffect(() => {
-    document.title = 'Dashboard - AVIRIS | Your Security Overview';
+    document.title = 'Dashboard - AVIRIS | Security Overview';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Manage your AVIRIS account, view device security status, monitor threats, check subscription plans, and review transaction history from your personalized dashboard.');

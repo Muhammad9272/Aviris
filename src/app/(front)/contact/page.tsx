@@ -1,11 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import FAQs from '@/components/shared/FAQs';
 import PhoneInput from '@/components/shared/PhoneInput';
 import '@/styles/front/pages/contact.css';
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = 'Contact Us - AVIRIS | Get in Touch with Our Team';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Contact AVIRIS support team. Get help with your cybersecurity needs, ask questions about our products, or request enterprise solutions. We\'re here to help 24/7.');
+    }
+  }, []);
   const [phone, setPhone] = useState('');
   return (
     <>

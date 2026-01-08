@@ -6,7 +6,7 @@ import PhoneInput from '@/components/shared/PhoneInput';
 
 export default function Profile() {
   useEffect(() => {
-    document.title = 'Profile Settings - AVIRIS | Manage Your Account';
+    document.title = 'Profile - AVIRIS | Account Settings';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Update your AVIRIS profile information, change contact details, upload profile picture, manage country and currency preferences, and customize your account settings.');
