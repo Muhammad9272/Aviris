@@ -19,7 +19,7 @@ export default function DashboardPage() {
         <i className="ri-alert-line fs-5 me-2"></i>
         <div>
           Your email is not verified. Please check your email for the verification link.
-          <a href="#" className="alert-link ms-1 fw-bold">Send again</a>
+          <button type="button" className="btn btn-link alert-link ms-1 fw-bold p-0 border-0" onClick={() => alert('Verification email sent!')}>Send again</button>
         </div>
         <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
@@ -173,7 +173,7 @@ export default function DashboardPage() {
         <div className="card-custom1 p1-4 mb-4 mt-5">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <h3 className="history-title">History</h3>
-            <a href="#" className="link-primary-custom">Download Summary</a>
+            <button type="button" className="btn btn-link link-primary-custom p-0 border-0" onClick={() => alert('Download started!')}>Download Summary</button>
           </div>
 
           <div className="table-responsive bg-light rounded-3">

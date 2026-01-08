@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { routes } from '@/config/routes';
 
 export default function ForgotPassword() {
   useEffect(() => {
@@ -55,9 +56,9 @@ export default function ForgotPassword() {
 
         {/* Right Section */}
         <div className="right-section">
-          <a href="login.php" className="back-btn">
+          <Link href={routes.auth.login} className="back-btn">
             <i className="ri-arrow-left-line"></i>
-          </a>
+          </Link>
           
           {/* Main Content - Vertically Centered */}
           <div className="flex-grow-1 d-flex flex-column justify-content-center">
@@ -87,7 +88,7 @@ export default function ForgotPassword() {
           {/* Footer - Aligned to Bottom */}
           <div className="mt-auto">
             <p className="footer-text mb-0">
-              Protected by reCAPTCHA and subject to the Google <a href="#" className="footer-link">Privacy Policy</a> and <a href="#" className="footer-link">Terms of Service</a>.
+              Protected by reCAPTCHA and subject to the Google <a href="https://policies.google.com/privacy" className="footer-link" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://policies.google.com/terms" className="footer-link" target="_blank" rel="noopener noreferrer">Terms of Service</a>.
             </p>
           </div>
         </div>

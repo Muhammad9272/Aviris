@@ -17,7 +17,6 @@ export const routes = {
   blogDetails: (id: string) => `/blogs/${id}`,
   business: '/business',
   contact: '/contact',
-  affiliate: '/affiliate',
   terms: '/terms',
   privacy: '/privacy',
   imprint: '/imprint',

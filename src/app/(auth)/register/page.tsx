@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { routes } from '@/config/routes';
 
 export default function Register() {
   useEffect(() => {
@@ -86,7 +87,7 @@ export default function Register() {
           <i className="ri-arrow-left-line"></i>
         </button>
         
-        <a href="#" className="register-link">Register a Partner</a>
+        <a href={routes.contact} className="register-link">Register a Partner</a>
 
         <div className="login-icon">
           <Image src="/front/img/login_icon.png" alt="AVIRIS Logo" width={80} height={80} />
@@ -169,7 +170,7 @@ export default function Register() {
                 onChange={(e) => setAgreeTerms(e.target.checked)}
               />
               <label className="form-check-label terms-text" htmlFor="terms">
-                Agree on <a href="#" className="terms-link">terms</a> and <a href="#" className="terms-link">privacy policy</a>.
+                Agree on <a href={routes.terms} className="terms-link">terms</a> and <a href={routes.privacy} className="terms-link">privacy policy</a>.
               </label>
             </div>
           </div>
@@ -177,11 +178,11 @@ export default function Register() {
           <button type="submit" className="avr__btn-primary">Sign up</button>
 
           <div className="signin-text">
-            Already have an account? <a href="#" className="signin-link">Sign in instead</a>
+            Already have an account? <a href={routes.auth.login} className="signin-link">Sign in instead</a>
           </div>
 
           <p className="footer-text">
-            Protected by reCAPTCHA and subject to the Google <a href="#" className="footer-link">Privacy Policy</a> and <a href="#" className="footer-link">Terms of Service</a>.
+            Protected by reCAPTCHA and subject to the Google <a href="https://policies.google.com/privacy" className="footer-link" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://policies.google.com/terms" className="footer-link" target="_blank" rel="noopener noreferrer">Terms of Service</a>.
           </p>
         </form>
       </div>

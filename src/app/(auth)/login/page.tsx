@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { routes } from '@/config/routes';
 
 export default function Login() {
   useEffect(() => {
@@ -51,7 +52,7 @@ export default function Login() {
 
       {/* Right Section */}
       <div className="right-section">
-        <Link href="/" className="back-btn">
+        <Link href={routes.home} className="back-btn">
           <i className="ri-arrow-left-line"></i>
         </Link>
         
@@ -103,13 +104,13 @@ export default function Login() {
                 Remember me?
               </label>
             </div>
-            <Link href="/userdashboard/auth/forgot-password" className="forgot-link">Forget Password</Link>
+            <Link href={routes.auth.forgotPassword} className="forgot-link">Forget Password</Link>
           </div>
 
           <button type="submit" className="avr__btn-primary">Login</button>
 
           <div className="signup-text">
-            New on AVIRIS? <Link href="/userdashboard/auth/register" className="signup-link">Create an account</Link>
+            New on AVIRIS? <Link href={routes.auth.register} className="signup-link">Create an account</Link>
           </div>
 
           <div className="divider">
@@ -134,7 +135,7 @@ export default function Login() {
           </button>
 
           <p className="footer-text">
-            Protected by reCAPTCHA and subject to the Google <a href="#" className="footer-link">Privacy Policy</a> and <a href="#" className="footer-link">Terms of Service</a>.
+            Protected by reCAPTCHA and subject to the Google <a href="https://policies.google.com/privacy" className="footer-link" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://policies.google.com/terms" className="footer-link" target="_blank" rel="noopener noreferrer">Terms of Service</a>.
           </p>
         </form>
       </div>

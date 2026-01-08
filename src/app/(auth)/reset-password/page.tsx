@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { routes } from '@/config/routes';
 
 export default function ResetPassword() {
   useEffect(() => {
@@ -68,9 +69,9 @@ export default function ResetPassword() {
 
         {/* Right Section */}
         <div className="right-section">
-          <a href="login.php" className="back-btn">
+          <Link href={routes.auth.login} className="back-btn">
             <i className="ri-arrow-left-line"></i>
-          </a>
+          </Link>
         
           <div className="login-icon">
             <Image src="/front/img/login_icon.png" alt="AVIRIS Logo" width={80} height={80} />
@@ -122,7 +123,7 @@ export default function ResetPassword() {
             <button type="submit" className="avr__btn-primary">Confirm create</button>
 
             <p className="footer-text">
-              Protected by reCAPTCHA and subject to the Google <a href="#" className="footer-link">Privacy Policy</a> and <a href="#" className="footer-link">Terms of Service</a>.
+              Protected by reCAPTCHA and subject to the Google <a href="https://policies.google.com/privacy" className="footer-link" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://policies.google.com/terms" className="footer-link" target="_blank" rel="noopener noreferrer">Terms of Service</a>.
             </p>
           </form>
         </div>
