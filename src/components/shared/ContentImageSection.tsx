@@ -1,3 +1,5 @@
+import { routes } from '@/config/routes';
+
 interface ContentImageSectionProps {
   imageSrc: string;
   imageAlt: string;
@@ -11,8 +13,8 @@ interface ContentImageSectionProps {
   paragraphs: string[];
   subtitle?: string;
   subtitleHighlight?: string;
+  bullets?: string[];
   ctaText: string;
-  ctaLink: string;
   imageOnLeft?: boolean;
 }
 
@@ -29,8 +31,8 @@ export default function ContentImageSection({
   paragraphs,
   subtitle,
   subtitleHighlight,
+  bullets,
   ctaText,
-  ctaLink,
   imageOnLeft = true
 }: ContentImageSectionProps) {
   return (
@@ -74,9 +76,8 @@ export default function ContentImageSection({
                       />
                     </div>
                     
-                    <h6 className="mb-2 fw-bold" style={{fontSize: 'clamp(15px, 3vw, 18px)', color: '#111827', lineHeight: 1.3}}>
-                      {overlayTitle}
-                    </h6>
+                    <h6 className="mb-2 fw-bold" style={{fontSize: 'clamp(15px, 3vw, 18px)', color: '#111827', lineHeight: 1.3}} dangerouslySetInnerHTML={{__html: overlayTitle}} />
+                   
                     
                     <p className="mb-0" style={{fontSize: 'clamp(12px, 2.5vw, 14px)', color: '#6B7280', lineHeight: 1.5}} dangerouslySetInnerHTML={{__html: overlayDescription}} />
                   </div>
@@ -97,7 +98,7 @@ export default function ContentImageSection({
               </h3>
               
               {paragraphs.slice(0, 2).map((paragraph, index) => (
-                <p key={index} className={`mb-${index === 1 ? '3' : '2'}`} style={{fontSize: '15px', color: '#6B7280', lineHeight: 1.6}}>
+                <p key={index} className={`mb-${index === 1 ? '3' : '2'}`} style={{ color: '#6B7280', lineHeight: 1.6}}>
                   {paragraph}
                 </p>
               ))}
@@ -109,12 +110,23 @@ export default function ContentImageSection({
               )}
 
               {paragraphs.slice(2).map((paragraph, index) => (
-                <p key={index + 2} className={`mb-${index === paragraphs.slice(2).length - 1 ? '3' : '2'}`} style={{fontSize: '15px', color: '#6B7280', lineHeight: 1.6}}>
+                <p key={index + 2} className={`mb-${index === paragraphs.slice(2).length - 1 ? '3' : '2'}`} style={{ color: '#6B7280', lineHeight: 1.6}}>
                   {paragraph}
                 </p>
               ))}
 
-              <a href={ctaLink} className="btn-secondary-custom">
+              {bullets && bullets.length > 0 && (
+                <ul className="download-features-list mb-4 mt-3">
+                  {bullets.map((bullet, index) => (
+                    <li key={index}>
+                      <i className="fas fa-check-circle"></i>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              <a href={routes.pricing} className="btn-secondary-custom">
                 {ctaText}
                 <i className="fas fa-arrow-right"></i>
               </a>

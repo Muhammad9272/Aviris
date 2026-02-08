@@ -33,7 +33,19 @@ const faqs = [
   }
 ];
 
-export default function FAQs() {
+type FAQItem = {
+  question: string;
+  answer: string;
+  open?: boolean;
+};
+
+interface FAQsProps {
+  items?: FAQItem[];
+}
+
+export default function FAQs({ items }: FAQsProps) {
+  const faqItems = items && items.length > 0 ? items : faqs;
+
   return (
     <section className="faq-section aviris__bg-dark">
       <div className="container">
@@ -42,19 +54,19 @@ export default function FAQs() {
           <div className="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
             <div className="faq-header-wrapper">
               <div className="section-badge mb-4">
-                <span>FAQ&apos;s</span>
+                <span>FAQs</span>
               </div>
 
               <h2 className="section-title">
                 <span className="text-dark">Frequently Asked</span><br/>
-                Questions&apos;s
+                Questions
               </h2>
 
               <p className="section-description">
                 Stay informed — here&apos;s everything you need to know.
               </p>
 
-              <a href="/front/contact" className="btn-secondary-custom">
+              <a href="/contact" className="btn-secondary-custom">
                 Contact us
                 <i className="fas fa-arrow-right"></i>
               </a>
@@ -65,7 +77,7 @@ export default function FAQs() {
           <div className="col-lg-7" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
             <div className="faq-accordion-wrapper">
               <div className="accordion" id="faqAccordion">
-                {faqs.map((faq, index) => (
+                {faqItems.map((faq, index) => (
                   <div key={index} className="accordion-item faq-item">
                     <h2 className="accordion-header" id={`faqHeading${index}`}>
                       <button 

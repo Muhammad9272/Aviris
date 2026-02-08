@@ -297,7 +297,7 @@
             .platform-icon img { width: 35px; height: 35px; }
             .icon-row-2 { padding: 0 23%; }
             .icon-row-3 { padding: 0 0.5%; }
-            .section-badge {
+            .cross-platform-section .section-badge {
                 font-size: 0.6rem;
                 padding: 0.25rem 0.6rem;
                 white-space: normal;

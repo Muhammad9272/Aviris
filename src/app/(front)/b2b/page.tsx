@@ -4,11 +4,14 @@ import BlogSection from '@/components/shared/BlogSection';
 import CTA from '@/components/shared/CTA';
 import HeroVideoSection from '@/components/shared/HeroVideoSection';
 import ContentImageSection from '@/components/shared/ContentImageSection';
+import FeatureCardsSection from '@/components/shared/FeatureCardsSection';
 import FeaturesListSection from '@/components/shared/FeaturesListSection';
+import PricingHighlightSection from '@/components/shared/PricingHighlightSection';
 import type { Metadata } from 'next';
 import '@/styles/front/pages/home.css';
 import '@/styles/front/pages/downloads.css';
 import '@/styles/front/pages/pricing.css';
+
 
 export const metadata: Metadata = {
   title: 'B2B Security - AVIRIS | IT Security from Germany for Teams',
@@ -16,45 +19,116 @@ export const metadata: Metadata = {
 };
 
 export default function B2BPage() {
-  // Feature cards data - 5 business features
+  // Feature cards data - 6 business features in 2-3-1 layout
   const features = [
     {
       icon: 'landing/setting.png',
-      title: 'Kostenlosen Sicherheitsarchitektur',
-      description: 'AVIRIS ist keine klassische Virenscanner. Es ist eine vollständige, intelligente Sicherheitslösung – designed für Teams und Unternehmen. Du administrierst zentral, managst Zugriffsrechte und behältst den Überblick – ohne umfangreiches IT-Wissen von dir zu verlangen.'
+      title: 'Kontrollierbare Sicherheitsentscheidungen',
+      description: 'AVIRIS priorisiert Nachvollziehbarkeit und Transparenz. Sicherheitsrelevante Maßnahmen lassen sich klar einordnen und intern erklären – ohne technische Detailtiefe erzwingen zu müssen. Das erleichtert Abstimmungen mit Geschäftsführung, Datenschutz oder externen Partnern.'
     },
     {
       icon: 'landing/calender.png',
-      title: 'Prävention Anstatt nur des Aktuellnarg',
-      description: 'Statt ständig manuelle Ausschließungen fordern, wartet AVIRIS proaktiv. Bedrohungen werden in Echtzeit erkannt, isoliert und disfektors – bevor sie sich Schaden entfalten. Das minimiert Downtime, deaktiviert, du darfsste spaziert reaktiv agieren.'
+      title: 'Präventive Absicherung des Arbeitsalltags',
+      description: 'AVIRIS ist auf frühe Erkennung atypischen Verhaltens ausgelegt – nicht erst auf bekannte Schadcodes. So werden auch neue oder noch nicht klassifizierte Angriffsmuster abgefangen, bevor sie den Geschäftsbetrieb beeinflussen.'
     },
     {
       icon: 'landing/lightening.png',
       title: 'Automatische Eingriffe vor Schadensbegrenzung',
-      description: 'Verdächtige Dateien werden sofort in Quarantäne verschoben – automatisch, ohne manuelles Eingreifen. Das reduziert Ausfallzeiten und stellt sicher, dass kritische Systeme geschützt bleiben – auch wenn niemand vor Ort ist.'
+      description: 'Statt nachträglicher Analyse greift AVIRIS automatisch ein, wenn verdächtige Aktivitäten auftreten. So werden Risiken isoliert, bevor Arbeitsausfälle, Datenverlust oder Eskalationen entstehen.'
     },
     {
       icon: 'landing/shield.png',
-      title: 'Rechenkraft nicht ohne Produktivitätsverlust',
-      description: 'AVIRIS Virenscan läuft leichtgewichtig im Hintergrund – keine CPU- oder RAM-intensive Prozesse, die deine Mitarbeiter verlangsamen. Arbeit geht weiter, während die Sicherheit rund um die Uhr gewährleistet bleibt.'
+      title: 'Sicherheitsbetrieb ohne Produktivitätsverlust',
+      description: 'AVIRIS ist für den dauerhaften Einsatz im Arbeitsumfeld konzipiert. Keine Pop-ups, keine Unterbrechungen, keine messbaren Performanceeinflüsse. Sicherheit läuft mit – nicht dazwischen.'
     },
     {
       icon: 'landing/folder.png',
-      title: 'Akzentierungen sensibler Unternehmensdaten',
-      description: 'Schütze Zugriffe, Dokumente und Unterlagen – automatisch. AVIRIS überwacht kritische Bereiche. Im Verdachtsfall werfen Alarms. Du entscheidest, wer auf welche Daten zugreift – mit nur wenigen Klicks.'
+      title: 'Absicherung sensibler Arbeitsdaten',
+      description: 'AVIRIS schützt Dateien, Zugangsdaten und interne Informationen unabhängig davon, über welchen Vektor ein Angriff erfolgt. Der Schutz ist geräteübergreifend und nicht an einzelne Anwendungen gebunden.'
+    },
+    {
+      icon: 'landing/eu.png',
+      title: 'Europäische Datenhaltung ohne rechtliche Abhängigkeiten',
+      description: 'AVIRIS ist so aufgebaut, dass Datenverarbeitung und Betrieb vollständig in Deutschland stattfinden. Damit vermeiden Sie Drittstaatenzugriffe, komplexe Vertragskonstrukte und rechtliche Grauzonen. Datenschutz ist kein Zusatz, sondern Grundvoraussetzung.'
     }
   ];
 
   // Connection & Invite features
   const inviteFeatures = [
-    'Du kannst weitere AVIRIS-Lizenzen ganz einfach per E-Mail oder über das Dashboard direkt an deine Mitarbeiter versenden. Für die Ersteinrichtung trägs du.',
-    'Per Einzelne Einladungslink – aktivieren können sich E-Mails, Messenger oder SMS (WhatsApp, Telegram, iMessage) – Ohne Registrierung. Ohne Wartezeitung.',
-    'Installiert weitere Geräte einfach nach Verwurzelte registrierung – und sie erscheint automatisch in deinem Dashboard. Alles gruppiert, sofortheitlich und leitet dir Geräte-alias sind – justiziert.',
-    'Du behältst die volle Kontrolle: Nutzer sind Zustände, pausieren und entfernen – Nur behältst du jedes nicht-Regierung hinzu.',
-    'Erweitere deinen Schutz nahrend – erhöhe einfach einem Geräte im Aktiviert oder vermeierst. Sodass Leads, Partner, Freelancer oder Remote-Mitarbeiter mit abgedeckt werden.',
-    'Berichte und Schritte: Zustand wird du Informiert – per E-Mail, In-App oder Dashboard. Erkannt ist struktur, dass kein Vorfall durch derlaubt.'
+    'Sie teilen Ihre AVIRIS-Lizenz gezielt mit Nutzern und Geräten, für die Sie im Arbeitsalltag Verantwortung tragen.',
+    'Die Einbindung erfolgt unkompliziert per E-Mail, Messenger oder Lizenzschlüssel. Keine separate Kontenverwaltung, keine technischen Einstiegshürden.',
+    'Sobald ein weiteres Gerät aktiviert wird, erscheint es automatisch im zentralen Lizenz-Dashboard. Sie erkennen auf einen Blick, welche Nutzer geschützt sind und welche Geräte aktiv sind – jederzeit.',
+    'Sie behalten die volle Kontrolle: Nutzer und Geräte lassen sich flexibel hinzufügen, pausieren oder entfernen, ohne den laufenden Betrieb zu beeinträchtigen.',
+    'Wächst Ihr Bedarf – etwa durch neue Geräte, zusätzliche Teammitglieder oder veränderte Arbeitsstrukturen – erweitern Sie Ihre Lizenz direkt im Dashboard, ohne Umwege oder Neuaufsetzen der Umgebung.'
   ];
 
+  const b2bFaqs = [
+    {
+      question: 'Wie viele Endgeräte lassen sich mit einer Lizenz absichern?',
+      answer: 'Eine AVIRIS-Lizenz ist für den Einsatz in kleinen Organisationen und Teams ausgelegt und ermöglicht die Absicherung von bis zu 20 Geräten oder Nutzern innerhalb einer Lizenzstruktur. Die Nutzung ist nicht an einen bestimmten Gerätetyp oder Arbeitsplatz gebunden.',
+      open: true
+    },
+    {
+      question: 'Für welche Organisationsformen ist AVIRIS geeignet?',
+      answer: 'AVIRIS richtet sich an Unternehmen, Agenturen und projektbasierte Teams, die mehrere Personen und Geräte zuverlässig absichern müssen – ohne eigene IT-Infrastruktur oder komplexe Rollenkonzepte. Sie entscheiden selbst, welche Arbeitsplätze und Nutzer eingebunden sind.'
+    },
+    {
+      question: 'Wie erfolgt die Einbindung neuer Geräte oder Mitarbeitender?',
+      answer: 'Die Anbindung erfolgt zentral über das Lizenz-Dashboard. Neue Nutzer oder Geräte werden per Einladung oder Lizenzschlüssel freigeschaltet. Der Prozess ist absichtlich reduziert und benötigt keine technische Vorbereitung.'
+    },
+    {
+      question: 'Müssen Geräte zentral konfiguriert oder vorbereitet werden?',
+      answer: 'Nein. Die Installation erfolgt durch die jeweiligen Nutzer selbst. Nach Aktivierung werden Geräte automatisch im System erfasst und sind sofort verwaltbar.'
+    },
+    {
+      question: 'Wie behalten Sie den administrativen Überblick?',
+      answer: 'Das Lizenz-Dashboard bietet eine konsolidierte Sicht auf: aktive Geräte und Nutzer, aktuelle Auslastung der Lizenz, verfügbare Kapazitäten. Änderungen lassen sich jederzeit vornehmen, ohne bestehende Arbeitsprozesse zu unterbrechen.'
+    },
+    {
+      question: 'Wie ist die Datenverarbeitung organisiert?',
+      answer: 'AVIRIS ist so konzipiert, dass sämtliche Datenverarbeitung innerhalb Deutschlands erfolgt. Es werden keine externen Cloud-Plattformen außerhalb Europas genutzt. Die Umsetzung entspricht vollständig den Anforderungen der DSGVO.'
+    },
+    {
+      question: 'Besteht ein Abhängigkeitsverhältnis zu internationalen Cloud-Anbietern?',
+      answer: 'Nein. AVIRIS ist technisch und organisatorisch unabhängig von US- oder Drittstaaten-Infrastrukturen. Damit verbleiben Daten und Kontrolle vollständig im europäischen Rechtsrahmen.'
+    },
+    {
+      question: 'Kann die Lizenz an wachsende Anforderungen angepasst werden?',
+      answer: 'Ja. Zusätzliche Kapazitäten lassen sich jederzeit erweitern, ohne Neuinstallation oder Migration bestehender Geräte. Das System wächst mit Ihrer Organisation.'
+    },
+    {
+      question: 'Wie verändert sich der wirtschaftliche Rahmen bei größerem Umfang?',
+      answer: 'Mit zunehmender Anzahl an Nutzern oder Geräten verbessert sich die Kostenrelation pro Einheit. Das Modell ist auf Skalierung im Team, nicht auf Einzelarbeitsplätze, ausgelegt.'
+    },
+    {
+      question: 'Ist der Einsatz auch ohne technisches Fachwissen möglich?',
+      answer: 'Ja. AVIRIS arbeitet automatisiert im Hintergrund, erfordert keine tägliche Bedienung und verursacht keine spürbaren Leistungseinbußen. Der Schutz integriert sich in den Arbeitsalltag, ohne zusätzlichen Aufwand zu erzeugen.'
+    }
+  ];
+
+
+  const ultimateSteps = [
+  {
+    number: '1',
+    title: 'Lizenz auswählen & starten',
+    description: 'Wähle dein Paket und erhalte direkt Zugriff auf dein AVIRIS Lizenz-Dashboard.'
+  },
+  {
+    number: '2',
+    title: 'Gerät hinzufügen',
+    description: 'Installiere AVIRIS auf deinem ersten Gerät (Smartphone, Tablet, Laptop oder PC) und aktiviere es.'
+  },
+  {
+    number: '3',
+    title: 'Menschen einladen oder Schlüssel teilen',
+    description: 'Lade Familie und weitere Personen ein – oder teile den Lizenzschlüssel einfach per WhatsApp, E-Mail oder Messenger.'
+  },
+  {
+    number: '4',
+    title: 'Fertig – alles zentral verwalten',
+    description: 'Sieh im Dashboard jederzeit, welche Geräte geschützt sind, wer eingeladen wurde und wie viele Slots noch frei sind.'
+  }
+];
   return (
     <>
       {/* Hero Section */}
@@ -62,170 +136,43 @@ export default function B2BPage() {
         videoSrc="/front/img/landing/b2b_banner.mp4"
         posterSrc="/front/img/landing/b2b.jpg"
         badgeIcon="fa-building"
-        badgeText="Enterprise Security. Made in Germany."
+        badgeText="Unternehmenssicherheit. Hergestellt in Deutschland."
         title="IT-Sicherheit aus Deutschland.<br />Für Teams mit Verantwortung."
         description="Digitale Sicherheit. Made in Germany."
         stats={[]}
       />
 
-      {/* Digital Protection Section */}
-      <section className="py-5 aviris__bg-dark" style={{paddingTop: '80px', paddingBottom: '80px'}}>
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6 order-lg-1 order-2 mb-3 mb-lg-0">
-              <div className="position-relative" style={{height: 'clamp(400px, 60vw, 550px)'}}>
-                <img 
-                  src="/front/img/landing/b2b.jpg" 
-                  alt="Business team working together" 
-                  className="w-100 h-100"
-                  style={{
-                    borderRadius: '24px',
-                    boxShadow: '0 20px 60px rgba(0, 0, 0, 0.1)',
-                    objectFit: 'cover',
-                    objectPosition: 'center'
-                  }}
-                />
-                
-                <div 
-                  className="position-absolute rounded-4"
-                  style={{
-                    bottom: 'clamp(15px, 3vw, 30px)',
-                    left: 'clamp(15px, 3vw, 30px)',
-                    maxWidth: 'calc(100% - clamp(30px, 6vw, 60px))',
-                    zIndex: 10,
-                    background: 'rgba(255, 255, 255, 0.6)',
-                    backdropFilter: 'blur(10px)',
-                    boxShadow: '0 10px 40px rgba(0, 0, 0, 0.15)',
-                    padding: 'clamp(16px, 3vw, 24px)'
-                  }}
-                >
-                  <div className="text-start">
-                    <div className="mb-2 mb-md-3">
-                      <img 
-                        src="/front/img/landing/login_icon.png" 
-                        alt="AVIRIS" 
-                        style={{width: 'clamp(36px, 8vw, 48px)', height: 'clamp(36px, 8vw, 48px)'}}
-                      />
-                    </div>
-                    
-                    <h6 className="mb-2 fw-bold" style={{fontSize: 'clamp(15px, 3vw, 18px)', color: '#111827', lineHeight: 1.3}}>
-                      Souveräne Sicherheit.
-                    </h6>
-                    
-                    <p className="mb-0" style={{fontSize: 'clamp(12px, 2.5vw, 14px)', color: '#6B7280', lineHeight: 1.5}}>
-                      Für lokale Unternehmen ist es besonders<br className="d-none d-md-block"/>
-                      wichtig: Datenschutz, Kontrolle und compliance.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <PricingHighlightSection steps={ultimateSteps} />
+      
 
-            <div className="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
-              <div className="platform-content">
-                <p className="section-badge mb-3">
-                  <i className="fas fa-shield me-2"></i>
-                  In Anbetracht in den digitalen Sicherheit ing
-                </p>
-                
-                <h3 className="mb-3">
-                  Digitale Welt. <span className="text-dark">Reale Angriffsflächen.</span>
-                </h3>
-                
-                <p className="mb-2" style={{fontSize: '15px', color: '#6B7280', lineHeight: 1.6}}>
-                  Automatisierter Betrug ist, gleichzeitige Phishing, datenverlust und erpresste Apps sind von Rangsystem hotter, wurden realistischer.
-                </p>
+      <ContentImageSection
+        imageSrc="/front/img/landing/b2b.jpg"
+        imageAlt="Business team working together"
+        overlayIcon="/front/img/login_icon.png"
+        overlayTitle="Souveräne Sicherheit."
+        overlayDescription="Entwickelt und betrieben in Deutschland.<br class='d-none d-md-block'/>Ohne Datenweitergabe, ohne externe Abhängigkeiten."
+        badgeIcon="fa-shield"
+        badgeText="Sicherheit für den digitalen Arbeitsalltag"
+        title="Digitale Welt."
+        titleHighlight="Reale Angriffsflächen."
+        paragraphs={[
+          'Automatisierter Betrug, KI-gestütztes Phishing, Datenabgriff und manipulierte Anwendungen sind kein Randphänomen mehr, sondern skalierbarer Bestandteil des digitalen Arbeitsalltags.',
+          'Wer digitale Systeme produktiv nutzt, weiß: Angriffe werden präziser, schneller und schwerer zu erkennen – insbesondere, wenn sie automatisiert erfolgen.',
+          'AVIRIS wurde in Deutschland entwickelt, wird auf Servern in Deutschland betrieben und ist vollständig DSGVO-konform.',
+          'Mit einer Lizenz sichern Sie Geräte und Nutzer zentral und strukturiert ab – ohne Datenweitergabe, ohne Abhängigkeit von US- oder russischen Anbietern und ohne unnötige Komplexität.',
+          
+        ]}
+        subtitle="Ein System."
+        subtitleHighlight="Volle Kontrolle."
+        ctaText="Jetzt deine Liebsten schützen"
+      />
 
-                <p className="mb-3" style={{fontSize: '15px', color: '#6B7280', lineHeight: 1.6}}>
-                  Wer digitale Systeme nutzt, wird Angriffszielverwundbare. Schmeller sind schwererer zuzuweisen – besonders im Business-Kontext. Unternehmes sind im Fokus – egal ob Größe oder Branche.
-                </p>
+      
 
-                <h3 className="mb-2">
-                  Ein System. <span className="text-dark">Volle Kontrolle.</span>
-                </h3>
 
-                <p className="mb-2" style={{fontSize: '15px', color: '#6B7280', lineHeight: 1.6}}>
-                  AVIRIS wurde in Deutschland entwickelt, läuft auf Servern in Deutschland und ist vollständig DSGVO-konform.
-                </p>
 
-                <p className="mb-3" style={{fontSize: '15px', color: '#6B7280', lineHeight: 1.6}}>
-                  Wir weiteren License schützt so rund—Die Menschen die dir writing sind. Garantiert strukturiert – Ohne Umwegenen ohne Datenweitergabe so Dritte.
-                </p>
 
-                <p className="mb-4" style={{fontSize: '15px', color: '#6B7280', lineHeight: 1.6}}>
-                  AVIRIS arbeitet ressourcenschonend im Hintergrund, ohne deinen Mitarbeitern Einfluss auf die Systemperformance und ohne störende Pop-ups.
-                </p>
-
-                <a href="#download" className="btn-secondary-custom">
-                  Jetzt deine Lizenzen sichern
-                  <i className="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Grid Section - 5 Business Features */}
-      <section className="py-5 aviris__bg-dark" style={{paddingTop: '80px', paddingBottom: '80px'}}>
-        <div className="container">
-          <div className="row g-3 g-md-4 mb-4">
-            {features.slice(0, 2).map((feature, index) => (
-              <div key={index} className="col-lg-6 col-md-6 col-12">
-                <div className="feature-card" style={{boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)', padding: 'clamp(20px, 4vw, 32px)', height: '100%'}}>
-                  <div className="feature-icon-wrapper" style={{width: 'clamp(56px, 12vw, 70px)', height: 'clamp(56px, 12vw, 70px)', margin: '0 auto clamp(16px, 3vw, 20px)'}}>
-                    <img src={`/front/img/${feature.icon}`} alt={feature.title} style={{width: '100%', height: '100%', objectFit: 'contain'}} />
-                  </div>
-                  <h5 style={{fontSize: 'clamp(16px, 2.5vw, 18px)', fontWeight: 600, marginBottom: 'clamp(10px, 2vw, 12px)', textAlign: 'center'}}>
-                    {feature.title}
-                  </h5>
-                  <p style={{fontSize: '14px', color: '#6B7280', lineHeight: 1.6, marginBottom: 0, textAlign: 'center'}}>
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="row g-3 g-md-4">
-            {features.slice(2, 5).map((feature, index) => (
-              <div key={index} className="col-lg-4 col-md-6 col-12">
-                <div className="feature-card" style={{boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)', padding: 'clamp(20px, 4vw, 32px)', height: '100%'}}>
-                  <div className="feature-icon-wrapper" style={{width: 'clamp(56px, 12vw, 70px)', height: 'clamp(56px, 12vw, 70px)', margin: '0 auto clamp(16px, 3vw, 20px)'}}>
-                    <img src={`/front/img/${feature.icon}`} alt={feature.title} style={{width: '100%', height: '100%', objectFit: 'contain'}} />
-                  </div>
-                  <h5 style={{fontSize: 'clamp(16px, 2.5vw, 18px)', fontWeight: 600, marginBottom: 'clamp(10px, 2vw, 12px)', textAlign: 'center'}}>
-                    {feature.title}
-                  </h5>
-                  <p style={{fontSize: '14px', color: '#6B7280', lineHeight: 1.6, marginBottom: 0, textAlign: 'center'}}>
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* EU Compliance Section */}
-      <section className="py-5 aviris__bg-dark" style={{paddingTop: '40px', paddingBottom: '80px'}}>
-        <div className="container">
-          <div className="text-center mb-5">
-            <div className="d-inline-flex align-items-center gap-2 bg-success bg-opacity-10 rounded-pill px-4 py-2 mb-3">
-              <img 
-                src="/front/img/landing/eu.png" 
-                alt="EU Flag" 
-                style={{width: '32px', height: '32px'}}
-              />
-              <span className="fw-semibold text-dark">Europäische Datenverarbeitung – rechtliche Anforderlichen</span>
-            </div>
-            
-            <p className="text-muted mx-auto" style={{maxWidth: '900px', fontSize: '15px', lineHeight: 1.6}}>
-              AVIRIS ist in der Loupe – ohne Drittanbieter-Serverträger und ohne undurchsichtige sicher Datentransfers. Daten bleiben, wo sie hingehören: bei dir und in Deutschland. Transparenter, nachvollziehbarer und mit dem Schutz nach deutschem und europäischen Recht. Kein Zugriff durch Non-EU-Zugriff. Datenschutz als Standard, nicht als Option.
-            </p>
-          </div>
-        </div>
-      </section>
+      <FeatureCardsSection features={features} iconBasePath="/front/img/" layout="2-3-1" />
 
       {/* Team Management Section */}
       <FeaturesListSection
@@ -234,10 +181,7 @@ export default function B2BPage() {
         titleHighlight="So binden Sie weitere Nutzer und"
         title="Geräte ein"
         features={inviteFeatures}
-        primaryButtonText="Jetzt deine Lizenzen sichern"
-        primaryButtonLink="#pricing"
-        secondaryButtonText="Learn More"
-        secondaryButtonLink="#features"
+        primaryButtonText="Jetzt deine Liebsten schützen"
         noteText="Zentrale Verwaltung für vollständigen Überblick und Sicherheit"
         imageSrc="/front/img/landing/family_banner.png"
         imageAlt="AVIRIS Dashboard"
@@ -245,7 +189,7 @@ export default function B2BPage() {
 
       <Testimonials />
       <BlogSection />
-      <FAQs />
+      <FAQs items={b2bFaqs} />
       <CTA />
     </>
   );

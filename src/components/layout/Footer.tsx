@@ -8,9 +8,13 @@ import '@/styles/front/components/footer.css'
 // Footer Menu Data
 const footerMenus = {
   Bundle: [
-    { name: 'Business', link: '/business' },
-    { name: 'AVIRIS Premium', link: '/#premium' },
-    { name: 'Pricing', link: '/pricing' },
+   
+
+    { name: 'B2B', link: '/b2b' },
+    { name: 'Family', link: '/family' },
+    { name: 'Rational', link: '/rational' },
+    { name: 'Youth', link: '/youth' },
+    { name: 'Free Funnel', link: '/free-funnel' },
   ],
   Products: [
     { name: 'AVIRIS VPN', link: '/features#vpn' },

@@ -69,9 +69,15 @@ export default function HeroVideoSection({
           <div className="h-100 d-flex align-items-end" style={{position: 'relative', zIndex: 2, padding: 'clamp(20px, 5vw, 60px) clamp(20px, 5vw, 60px) clamp(30px, 5vw, 60px) clamp(20px, 5vw, 60px)'}}>
             <div className="row w-100">
               <div className="col-lg-9 col-md-10">
-                <div className="d-inline-flex align-items-center gap-2 bg-white bg-opacity-10 backdrop-blur border border-white border-opacity-20 rounded-pill px-3 py-2 mb-3">
-                  <i className={`fas ${badgeIcon} text-success`}></i>
-                  <span className="fw-semibold text-white">{badgeText}</span>
+               <div className="d-inline-flex align-items-center gap-2 bg-white bg-opacity-10 backdrop-blur border border-white border-opacity-20 rounded-pill mb-3" 
+                  style={{
+                    padding: 'clamp(6px, 1.5vw, 8px) clamp(12px, 3vw, 16px)',
+                    fontSize: 'clamp(12px, 2vw, 14px)'
+                  }}>
+                  <i className={`fas ${badgeIcon} text-success`} style={{fontSize: 'clamp(12px, 2vw, 14px)'}}></i>
+                  <span className="fw-semibold text-white" style={{fontSize: 'clamp(12px, 2vw, 14px)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}>
+                    {badgeText}
+                  </span>
                 </div>
 
                 <h2 className="mb-3 text-white section-title" dangerouslySetInnerHTML={{__html: title}} />

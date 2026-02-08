@@ -1,3 +1,5 @@
+import { routes } from '@/config/routes';
+
 interface FeaturesListSectionProps {
   badgeIcon: string;
   badgeText: string;
@@ -5,9 +7,6 @@ interface FeaturesListSectionProps {
   titleHighlight?: string;
   features: string[];
   primaryButtonText: string;
-  primaryButtonLink: string;
-  secondaryButtonText: string;
-  secondaryButtonLink: string;
   noteText: string;
   imageSrc: string;
   imageAlt: string;
@@ -21,9 +20,6 @@ export default function FeaturesListSection({
   titleHighlight,
   features,
   primaryButtonText,
-  primaryButtonLink,
-  secondaryButtonText,
-  secondaryButtonLink,
   noteText,
   imageSrc,
   imageAlt,
@@ -59,12 +55,9 @@ export default function FeaturesListSection({
 
               {/* CTA Buttons */}
               <div className="download-buttons">
-                <a href={primaryButtonLink} className="btn-secondary-custom">
+                <a href={routes.pricing} className="btn-secondary-custom">
                   {primaryButtonText}
                   <i className="fas fa-arrow-right"></i>
-                </a>
-                <a href={secondaryButtonLink} className="btn-outline-custom">
-                  {secondaryButtonText}
                 </a>
               </div>
 
